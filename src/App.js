@@ -1,3 +1,5 @@
+import {initializeApp} from 'firebase/app'
+import {firebaseConfig} from './config/Config'
 import './App.css';
 
 function App() {
