@@ -11,7 +11,10 @@ const FirebaseApp = initializeApp(firebaseConfig)
 function App() {
   return (
     <div className="App">
-        <Test />
+        <Routes>
+          <Route path="/" element={ <Home/> } />
+          <Route path="/" element={ <About/> } />
+        </Routes>
     </div>
   );
 }
