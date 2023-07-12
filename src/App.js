@@ -5,6 +5,8 @@ import { Test } from './Components/Test';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
+//components
+import { Header } from './Components/Header';
 import {Routes, Route} from 'react-router-dom'
 
 const FirebaseApp = initializeApp(firebaseConfig)
@@ -12,6 +14,7 @@ const FirebaseApp = initializeApp(firebaseConfig)
 function App() {
   return (
     <div className="App">
+      <Header/>
         <Routes>
           <Route path="/" element={ <Home/> } />
           <Route path="/home" element={ <Home/> } />
