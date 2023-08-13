@@ -10,6 +10,7 @@ import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { Signup } from './pages/Signup';
 import { Signin } from './pages/Signin';
+import { Signout } from './pages/Signout';
 // components
 import { Header } from './Components/Header';
 import {Routes, Route} from 'react-router-dom';
@@ -64,6 +65,7 @@ function App() {
             <Route path="/contact" element={ <Contact/> } />
             <Route path="/signup" element={ <Signup/> } />
             <Route path="/signin" element={ <Signin/> } />
+            <Route path="/signout" element={ <Signout/>} />
         </Routes>
       </FBAuthContext.Provider>
     </div>
