@@ -25,7 +25,7 @@ const NavRoutes = [
   {name: "Home", goto: "/"},
   {name: "About", goto: "/about"},
   {name: "Contact", goto: "/contact"},
-  {name: "Sign in", goto: "/singin"},
+  {name: "Sign in", goto: "/signin"},
   {name: "Sign up", goto: "/signup"}
 ]
 

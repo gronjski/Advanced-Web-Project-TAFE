@@ -34,7 +34,7 @@ export function Signup (props) {
         }
     }, [password])
 
-    const SignUpHandler = () => {
+    const SignOutHandler = () => {
         createUserWithEmailAndPassword( FBAuth, email, password )
         .then ( ( user ) => {
             //user is created in Firebase
@@ -52,7 +52,7 @@ export function Signup (props) {
                 <Col md = {{span: 4, offset:4}}>
                     <Form onSubmit={ (evt) => {
                         evt.preventDefault ()
-                        SignUpHandler()
+                        SignOutHandler()
                         } }>
                         <h3>Sign up for an account</h3>
                         <Form.Group>
