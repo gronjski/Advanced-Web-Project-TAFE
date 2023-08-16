@@ -1,6 +1,6 @@
-import Container from "react-bootstrap/Container";
-import  Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import Container from 'react-bootstrap/Container';
+import  Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 import { useContext, useEffect, useState } from "react";
 import {collection, getDocs } from "firebase/firestore";
@@ -29,14 +29,24 @@ export function Home () {
     }
 
     useEffect ( () => {
-        if( !data ) {
+        if( data.length === 0 ) {
             getData()
         }
     })
 
+const Columns = data.map( (book, key) => {
+    return(
+        <Col md="4" key={key}>
+            <h3>{book.title}</h3>
+        </Col>
+    )
+})
+
     return (
-        <div>
-            <h1>Home</h1>
-        </div>
+        <Container>
+            <Row>
+                {Columns}
+            </Row>
+        </Container>
     )
 }
