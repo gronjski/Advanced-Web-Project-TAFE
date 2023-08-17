@@ -40,7 +40,7 @@ export function Home () {
 const Image = (props) => {
     const [imgPath,setImgPath] = useState()
     const imgRef = ref( FBStorage, `book_cover/${ props.path}`)
-    getDownloadURL( imgRef).then ( (url ) => console.log (url))
+    getDownloadURL( imgRef).then ( (url ) => setImgPath (url))
 
     return (
         <Card.Img variant="top" src={imgPath} />
