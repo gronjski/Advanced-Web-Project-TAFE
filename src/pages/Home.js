@@ -51,7 +51,7 @@ const Image = (props) => {
 
 const Columns = data.map( (book, key) => {
     return(
-        <Col md="4" key={key}>
+        <Col md="3" key={key} className='my-3'>
             <Card>
                 <Image path= {book.image}/>
                 <Card.Body>
