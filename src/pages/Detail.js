@@ -13,6 +13,8 @@ import { doc, getDoc } from "firebase/firestore";
 import { ref, getDownloadURL } from "firebase/storage";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
+import '../styles/Detail.css'
+
 export function Detail ( props ) {
     const [bookData, setBookData] = useState()
 
@@ -45,7 +47,7 @@ export function Detail ( props ) {
         getDownloadURL( imgRef).then ( (url ) => setImgPath (url))
     
         return (
-            <img src={imgPath}/>
+            <img src={imgPath} alt= 'This the the iamge of the book cover' className='image'/>
         )
     }
 
@@ -53,16 +55,16 @@ export function Detail ( props ) {
         return (
             <Container>
                 <Row>
-                    <Col>
+                    <Col md="2">
                         <Image path={bookData.image} />                    
                     </Col>
                     <Col>
-                        <h2>{bookData.title}</h2>
-                        <h3>{bookData.summary}</h3>
+                        <h2 className='title'>{bookData.title}</h2>
+                        <h3 className='summary'>{bookData.summary}</h3>
                     </Col>
                 </Row>
                 <Row>
-                    <Col>
+                    <Col md = "2">
                     <h3>Write a review</h3>
                     </Col>
                 </Row>
